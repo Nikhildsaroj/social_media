@@ -68,7 +68,7 @@ def build_query(keyword: str, selected_domains):
 async def scrape_social_media_async(keyword: str, selected_domains, max_results: int, progress=None):
     rows = []
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
+        browser = await p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
         page = await browser.new_page()
 
         query = build_query(keyword, selected_domains)
