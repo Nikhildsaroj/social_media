@@ -1,0 +1,6 @@
+streamlit
+playwright
+nest_asyncio
+pandas
+phonenumbers
+openpyxl
